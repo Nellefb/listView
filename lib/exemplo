@@ -1,0 +1,19 @@
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('ListView Builder')),
+      body: ListView.builder(
+        itemCount: 50,
+        itemBuilder: (BuildContext contexto, int index){ //retorna widget ou nulo, pois é o q forma a tela/"atualiza"
+          if(index == 49){
+            return Text('Last Text $index', style: TextStyle(fontSize: 25),);
+          }
+          else{
+          return Text('Text $index', style: TextStyle(fontSize: 25),);
+
+          }
+
+        },
+      ),
+    );
+  }
